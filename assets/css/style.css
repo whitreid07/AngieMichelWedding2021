@@ -139,7 +139,6 @@ body {
   background-color: rgba(245,245,245, 1);
   font-size: 15px;
   font-size: 1rem;
-  /* color: #797979; */
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   background:  url("https://www.transparenttextures.com/patterns/back-pattern.png");
@@ -178,9 +177,16 @@ h2 {
   color: #954c46;
 }
 
+h3 {
+  color: #fab281;
+}
+
 h4 {
   font-family: 'Montserrat', sans-serif;
   text-transform: capitalize;
+  font-weight: 600;
+  color: rgb(121, 121, 121);
+  color: #fab281;
 }
 
 p {
@@ -248,10 +254,12 @@ nav {
 
 .beginning {
   color: #fab281;
+  font-weight: 600;
 }
 
 .future {
-  color: #670a10;
+  color: #fab281;
+  font-weight: 600;
 }
 
 .weddingEventsImgContainer {
@@ -261,6 +269,7 @@ nav {
 
 .weddingEventsAddress {
   margin: 0;
+  justify-content: space-around;
 }
 
 .rsvpNow {
@@ -271,20 +280,45 @@ nav {
   color: white;
 }
 
-.rsvpNow:hover {
+.rsvpNowFR {
+  border: 2px solid #fab281;
+  padding: 1%;
+  width: 200px;
+  background: #fab281;
+  color: white;
+}
+
+.rsvpNow:hover, .rsvpNowFR:hover {
   background: #670a10;
   border: 2px solid #670a10;
   transition: all 0.3s;
 }
 
-.rsvpNow p {
+.rsvpNow p, .rsvpNowFR p {
   color: white;
-  text-transform: capitalize;
+  text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .highlightLanguage {
-  color: red;
+  color: #670a10;
+}
+
+.couple-area {
+  -webkit-box-shadow: 0px 4px 13.65px 7.35px rgba(178, 201, 211, 0.18);
+  box-shadow: 0px 4px 13.65px 7.35px rgba(250, 178, 129, 0.1);
+}
+
+footer {
+  background: #670a10;
+}
+
+footer p {
+  text-align: center;
+  font-size: 1rem;
+  padding: 1.5% 7%;
+  line-height: 1rem;
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -481,7 +515,7 @@ nav {
   font-size: 2rem;
 }
 
-a:hover {
+.menu a:hover {
   color:#fab281;
 }
 
@@ -525,6 +559,7 @@ a:hover {
   width: 150px;
   margin-top: 10%;
   background: #670a10;
+  align-self: center;
 }
 
 .locationButton:hover {
@@ -735,9 +770,18 @@ a:hover {
 .section-title {
   text-align: center;
   margin-bottom: 52px;
+  padding: 0 10%;
   padding-top: 70px;
   position: relative;
-  
+}
+
+p.resondRSVP, p.resondRSVPFR {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+p.footerPargraph a:hover {
+  color: #fab281;
 }
 
 @media (max-width: 991px) {
@@ -753,11 +797,12 @@ a:hover {
 }
 
 .section-title h2 {
-  font-size: 3.3rem;
+  font-size: 4rem;
   font-weight: 600;
   margin: 0 0 0.39em;
   text-transform: capitalize;
   font-family: "Pinyon Script";
+  padding-top: 7%;
 }
 
 @media (max-width: 991px) {
@@ -769,22 +814,35 @@ a:hover {
 
 @media (max-width: 767px) {
   .section-title h2 {
-    font-size: 25px;
     font-size: 1.66667rem;
   }
 }
 
+.section-title:before {
+  content: "";
+  background: url("../images/sec-title-flower.png") center center/cover no-repeat local;
+  width: 126px;
+  height: 59px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 0;
+  margin: 5% 0;
+}
+
 .section-title p {
-  font-size: 15px;
   font-size: 1rem;
-  font-weight: 300;
   margin-bottom: 0;
 }
 
 @media (max-width: 767px) {
   .section-title p {
     font-size: 14px;
-    font-size: 0.93333rem;
+    font-size: 1rem;
   }
 }
 
@@ -2714,7 +2772,6 @@ header {
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
-  margin-left: 12rem;
   z-index: 10;
 }
 
@@ -3572,11 +3629,15 @@ header {
   background: #fff;
   max-width: 580px;
   padding: 120px 100px;
-  -webkit-box-shadow: 0px 3px 24px 0px rgba(0, 0, 0, 0.06);
-  box-shadow: 0px 3px 24px 0px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 4px 13.65px 7.35px rgba(104, 11, 16, 0.18);
+  box-shadow: 0px 4px 13.65px 7.35px rgba(250, 178, 129, 0.1);
   text-align: center;
   margin: 100px auto;
   position: relative;
+}
+
+.invitation-section {
+  background-color: rgba(150, 76, 71, 0.1)
 }
 
 @media (max-width: 991px) {
@@ -3601,7 +3662,7 @@ header {
   position: absolute;
   left: 50px;
   top: 50px;
-  border: 5px solid rgba(178, 201, 211, 0.3);
+  border: 5px solid rgba(104, 11, 16, 0.3);
 }
 
 @media (max-width: 767px) {
@@ -3611,7 +3672,7 @@ header {
     position: absolute;
     left: 20px;
     top: 20px;
-    border: 3px solid rgba(178, 201, 211, 0.3);
+    /* border: 3px solid rgba(178, 201, 211, 0.3); */
   }
 }
 
@@ -3659,10 +3720,10 @@ header {
 }
 
 .invitation-section .invitation-box h2 {
-  font-family: "aphroditeslimtextregular";
-  font-size: 50px;
-  font-size: 3.33333rem;
+  font-family: "Pinyon Script";
+  font-size: 4rem;
   margin: 0 0 0.6em;
+  font-weight: 600;
 }
 
 @media (max-width: 991px) {
@@ -3674,8 +3735,8 @@ header {
 
 @media (max-width: 767px) {
   .invitation-section .invitation-box h2 {
-    font-size: 28px;
-    font-size: 1.86667rem;
+    font-size: 2.5rem;
+    line-height: 36px;
   }
 }
 
@@ -3717,21 +3778,12 @@ header {
 .invitation-section .invitation-box p {
   font-size: 15px;
   font-size: 1rem;
-  text-transform: uppercase;
   margin-bottom: 2em;
-}
-
-@media (max-width: 991px) {
-  .invitation-section .invitation-box p {
-    font-size: 13px;
-    font-size: 0.86667rem;
-  }
 }
 
 @media (max-width: 767px) {
   .invitation-section .invitation-box p {
-    font-size: 12px;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -3746,6 +3798,9 @@ header {
   width: 50%;
   float: left;
 }
+.couple-section {
+   background-color: rgba(250, 178, 129, 0.1);
+}
 
 .theFuture {
   top: 0%;
@@ -3759,7 +3814,7 @@ header {
 }
 
 .couple-section .details {
-  background-color: #f6e9df;
+  background-color: #f9f9f9;
   position: relative;
 }
 
@@ -4194,6 +4249,7 @@ header {
 .contact-section {
   position: relative;
   z-index: 0;
+  background-color: rgba(150, 76, 71, 0.1);
 }
 
 .contact-section .container {
@@ -4232,7 +4288,7 @@ header {
 
 .contact-section .contact-form:after {
   content: "";
-  background: url("../images/rsvp-flower.png") center center/cover no-repeat local;
+  /* background: url("../images/rsvp-flower.png") center center/cover no-repeat local; */
   width: 982px;
   height: 405px;
   position: absolute;
@@ -4344,6 +4400,8 @@ header {
 .event-section {
   position: relative;
   padding-bottom: 90px;
+  color: #797979;
+  background-color: rgba(250, 178, 129, 0.1)
 }
 
 @media (max-width: 991px) {
@@ -4367,6 +4425,37 @@ header {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+.photo {
+  background: url("../images/proposal-bg.jpg") center center/cover no-repeat local;
+  text-align: center;
+  width: 100%;
+  height: 550px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-position: 50% 50%;
+}
+
+.photo::before {
+  content: "";
+  background: -webkit-linear-gradient(top, #fab281 30%, transparent);
+  background: -moz-linear-gradient(top, #fab281 30%, transparent);
+  background: -o-linear-gradient(top, #fab281 30%, transparent);
+  background: -ms-linear-gradient(top, #fab281 30%, transparent);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fab281), to(transparent));
+  background: linear-gradient(top, #fab281 30%, transparent);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.photoSection {
+  padding-bottom: 0;
 }
 
 @media (max-width: 991px) {
@@ -4399,12 +4488,10 @@ header {
 .event-section .top-area h2,
 .event-section .top-area p {
   position: relative;
-  z-index: 0;
 }
 
 .event-section h2 {
   font-family: "Pinyon Script";
-  font-size: 60px;
   font-size: 4rem;
   color: #fff;
 }
@@ -4418,8 +4505,8 @@ header {
 
 @media (max-width: 767px) {
   .event-section h2 {
-    font-size: 38px;
-    font-size: 2.53333rem;
+    font-size: 2.5rem;
+    line-height: 36px;
   }
 }
 
@@ -4465,6 +4552,9 @@ header {
   text-align: center;
   -webkit-box-shadow: 0px 4px 13.65px 7.35px rgba(178, 201, 211, 0.18);
   box-shadow: 0px 4px 13.65px 7.35px rgba(250, 178, 129, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media (max-width: 991px) {
@@ -4493,6 +4583,7 @@ header {
   position: relative;
   margin: 0 0 1.4em;
   padding: 0 0 0.8em;
+  font-weight: 600;
 }
 
 @media (max-width: 767px) {
@@ -7987,16 +8078,9 @@ header {
   @media only screen and (min-width: 320px) and (max-width: 992px) {
 
   .img-holder {
-    height: 300px !important;
+    height: 250px !important;
   }
 }
-
-/* @media only screen and (min-width: 992px) and (max-width: 1600px) {
-
-  .img-holder {
-    height: 1005px !important;
-  }
-} */
   
   @media only screen and (max-width: 1050px) and (min-width: 320px)  {
 
@@ -8039,7 +8123,6 @@ header {
 
   span {
     padding: 0;
-    font-size: 5.5rem;
   }
 
   .hero-style-1 .wedding-date span {
@@ -8065,6 +8148,27 @@ header {
 
   .count-down-clock {
     max-width: 220px;
+  }
+
+  .section-title h2 {
+    font-size: 2.5rem;
+  }
+
+  .container {
+    padding: 0 2rem;
+  }
+
+  .menu-wrap .menu > div > div > ul > li > a {
+    font-size: 1.5rem ;
+  }
+
+  .section-title {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  footer p {
+    font-size: 0.7rem;
+    line-height: 15px;
   }
 }
 

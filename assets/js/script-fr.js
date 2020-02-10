@@ -656,10 +656,20 @@
             },
 
             messages: {
-                name: "Please enter your name",
-                email: "Please enter your email",
-                guest: "Select your number of guest",
-                events: "Select your event list"
+              name: "SVP inscrire votre nom",
+              email: "Serez-vous présent.e?",
+              guest_name: "SVP inscrire le nom de votre invité.e",
+              events: "SVP choisir votre événement",
+              your_meal: "SVP confirmer votre choix de repas",
+              guest_meal: "SVP confirmer le choix de repas de votre invité.e",
+              allergies: "SVP confirmer des allergies",
+              guest_allergies: "SVP confirmer si l'invité.e a des allergies",
+              drinking: "SVP confirmer si vous boirez",
+              guest_drinking: "SVP confirmer si votre invité.e boit",
+              alcohol_preference: "SVP confirmer vos choix d’alcool",
+              guest_alcohol_preference: "SVP confirmer les choix d'alcool de votre invité.e",
+              need_accommodations: "SVP confirmer si vous allez vous héberger à l’hôtel",
+              guest_accommodations: "SVP confirmer si votre invité.e s'hébergera à l'hôtel",
             },
 
             submitHandler: function (form) {

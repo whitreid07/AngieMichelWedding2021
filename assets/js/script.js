@@ -658,8 +658,18 @@
             messages: {
                 name: "Please enter your name",
                 email: "Please enter your email",
-                guest: "Select your number of guest",
-                events: "Select your event list"
+                guest_name: "Please enter your guest’s name",
+                events: "Please select your event",
+                your_meal: "Please select your menu choice",
+                guest_meal: "Please select your guest's menu choice",
+                allergies: "Please select any allergies",
+                guest_allergies: "Please select any guest allergies",
+                drinking: "Please select if you're drinking",
+                guest_drinking: "Please select if your guest is drinking",
+                alcohol_preference: "Please select drink choice",
+                guest_alcohol_preference: "Please select guest's drink choice",
+                need_accommodations: "Please select if you need a hotel",
+                guest_accommodations: "Please select if your guest needs a hotel",
             },
 
             submitHandler: function (form) {
